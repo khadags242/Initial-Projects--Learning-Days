@@ -97,3 +97,7 @@ target/
 
 #exclude data from the VScode template to keep directly clean
 .venv/
+models/
+notebooks/
+references/
+reports/
