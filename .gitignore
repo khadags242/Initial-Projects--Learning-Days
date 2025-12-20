@@ -109,3 +109,4 @@ target/
 pyproject.toml
 README.md
 uv.lock
+.gitignore
