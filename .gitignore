@@ -93,20 +93,4 @@ target/
 /models/
 
 # exclude data from source control by default
-/data/
-
-# excklude all files from template
-.venv/
-/data/
-/models/
-/notebooks/
-/references/
-/reports/
-/src/
-.env.example
-.gitignore
-.python-version
-pyproject.toml
-README.md
-uv.lock
-.gitignore
+# /data/
