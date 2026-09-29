@@ -10,4 +10,4 @@ while count <= num:
     start = start + count
     count = count + 2
 
-print(f"The final sum is {start}")
+print(f"The sum of all even numbers upto {num} is {start}")
