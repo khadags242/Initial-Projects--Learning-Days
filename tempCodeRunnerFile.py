@@ -1,22 +1,44 @@
-# The computer chooses a number.
-# Keep asking the user to guess until they get it right.
-# Tell them whether their guess is too high or too low.
-# Track the number of attempts.
+# Ask the user for a number.
+# Generate its multiplication table.
+# Ask if they want another table.
+# Continue until they choose to stop.
 
-# enabling the program to guess a random number between 1 to 10
-import random
-num=random.randint(1,10)
-print(num)
+num_for_table = int(
+    input("Please enter the number for which multiplication table needs to be built: ")
+)
+num_multiplier = int(
+    input(
+        "Please enter the multiplier to which you would like to build the table for: "
+    )
+)
 
-user_input=int(input(("Please guess the computer guessed number from 1 to 10")))
-count=0
+counter = 0
 
-while num!=user_input:
-    print("You have not guessed the correct number!!")
-    user_input=("Please re- guess the computer guessed number from 1 to 10")
-    count=count+1
-    
-print(f"COngratulations! you guessed the correct number in {count} attempt")
-    
-    
+while counter <= num_multiplier:
+    output = num_for_table * counter
+    print(f"{num_for_table}*{counter}= {output}")
+    counter = counter + 1
 
+new_request = input("Would you like to print another table (y/n): ")
+
+while new_request == "y":
+    num_for_table = int(
+        input(
+            "Please enter the number for which multiplication table needs to be built: "
+        )
+    )
+    num_multiplier = int(
+        input(
+            "Please enter the multiplier to which you would like to build the table for: "
+        )
+    )
+
+    counter = 0
+
+    while counter <= num_multiplier:
+        output = num_for_table * counter
+        print(f"{num_for_table}*{counter}= {output}")
+        counter = counter + 1
+    new_request = input("Would you like to print another table (y/n): ")
+
+print("Thank you")
